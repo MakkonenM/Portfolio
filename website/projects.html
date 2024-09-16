@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Ultimate Project Portfolio</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+      :root {
+        --primary-color: #3a86ff;
+        --secondary-color: #ff006e;
+        --background-color: #f8f9fa;
+        --text-color: #333;
+        --card-bg-color: #ffffff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Poppins', sans-serif;
+        background-color: var(--background-color);
+        color: var(--text-color);
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      header {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 60px 0;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        animation: fadeInDown 1s ease-out;
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+        opacity: 0.8;
+        animation: fadeInUp 1s ease-out 0.5s both;
+      }
+
+      .projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        padding: 60px 0;
+      }
+
+      .project-card {
+        background-color: var(--card-bg-color);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .project-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .project-info {
+        padding: 20px;
+      }
+
+      .project-title {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: var(--primary-color);
+      }
+
+      .project-description {
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 15px;
+      }
+
+      .project-tech {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .tech-tag {
+        background-color: var(--secondary-color);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+      }
+
+      .view-project {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 8px 15px;
+        background-color: var(--primary-color);
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .view-project:hover {
+        background-color: #2a75e6;
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        .projects {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>My Project Showcase</h1>
+        <p class="subtitle">
+          Bringing ideas to life through code and creativity
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="projects">
+        <div class="project-card">
+          <img
+            src="../images/Laskin.png"
+            alt="Project 1"
+            class="project-image"
+          />
+          <div class="project-info">
+            <h3 class="project-title">Calculator</h3>
+            <p class="project-description">
+              A cutting-edge web application that revolutionizes how people
+              interact with data.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">C#</span>
+            </div>
+            <a
+              href="https://github.com/MakkonenM/Laskin-Csharp-Python"
+              class="view-project"
+              >View Project</a
+            >
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img
+            src="/api/placeholder/600/400"
+            alt="Project 2"
+            class="project-image"
+          />
+          <div class="project-info">
+            <h3 class="project-title">Carshop</h3>
+            <p class="project-description">
+              Mobile app that helps users track their fitness goals and stay
+              motivated.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Flutter</span>
+              <span class="tech-tag">Firebase</span>
+            </div>
+            <a href="#" class="view-project">View Project</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img
+            src="/api/placeholder/600/400"
+            alt="Project 3"
+            class="project-image"
+          />
+          <div class="project-info">
+            <h3 class="project-title">Math Game</h3>
+            <p class="project-description">
+              A collaborative platform for creative professionals to showcase
+              and discover new talents.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Vue.js</span>
+              <span class="tech-tag">Django</span>
+              <span class="tech-tag">PostgreSQL</span>
+            </div>
+            <a
+              href="https://github.com/MakkonenM/Matikkapeli"
+              class="view-project"
+              >View Project</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
