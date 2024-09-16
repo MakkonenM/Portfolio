@@ -126,12 +126,11 @@ nav {
   margin-bottom: 1.5rem;
 }
 .hero-image {
-  flex: 0 0 200px;
+  flex: 0 0 350px;
 }
 .hero-image img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
 }
 .menu-toggle {
   display: none;

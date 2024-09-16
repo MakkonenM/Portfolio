@@ -4,20 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/index.css" />
-    <title>Joe Greyson - Fullstack Developer</title>
+    <title>Mikael Makkonen - Portfolio</title>
   </head>
+
   <style></style>
+
   <body>
     <!-- Header Section -->
     <header>
       <nav class="container">
-        <div class="logo">Joe.</div>
+        <!-- Logo -->
+        <div class="logo">Portfolio</div>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="projects.html">Projects</a></li>
-          <li><a href="document.html">Contact</a></li>
+          <li><a href="document2.html">Documentation</a></li>
         </ul>
+        <!-- Toggle button for mobile menu -->
         <div class="menu-toggle">☰</div>
       </nav>
     </header>
@@ -26,18 +30,23 @@
     <main class="container lowered">
       <section id="home" class="hero">
         <div class="hero-content">
-          <h1>Hi, I'm <span>Joe Greyson</span></h1>
+          <h1>Hi, I'm <span>Mikael Makkonen</span></h1>
           <h2>Full Stack Developer</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
-            et officiis suscipit ut assumenda libero tenetur expedita eaque,
-            quaerat quasi.
+            As a Full Stack Developer, I am passionate about building dynamic,
+            responsive, and scalable web applications from the ground up. My
+            expertise lies in both frontend and backend development, allowing me
+            to handle the full development lifecycle with ease.
           </p>
+          <!-- Buttons linking to other sections -->
           <a href="about.html" class="btn">About Me</a>
           <a href="projects.html" class="btn btn-outline">See Projects</a>
+
+          <!-- Social icon container -->
           <div class="icon-container">
-            <!-- Placeholder for icons -->
+            <!-- Placeholder for social icons -->
             <a href="#" class="social-icon">
+              <!-- LinkedIn Icon (SVG) -->
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -51,6 +60,8 @@
                 />
               </svg>
             </a>
+
+            <!-- Email Icon (SVG) -->
             <a href="#" class="social-icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -65,6 +76,8 @@
                 />
               </svg>
             </a>
+
+            <!-- GitHub Icon (SVG) -->
             <a href="#" class="social-icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -81,16 +94,20 @@
             </a>
           </div>
         </div>
+
+        <!-- Hero image -->
         <div class="hero-image">
-          <img src="../images/testi 2.png" alt="Joe Greyson" />
+          <img src="../images/kuva.png" alt="Joe Greyson" />
         </div>
       </section>
     </main>
 
+    <!-- Script for the toggle menu functionality -->
     <script>
       const menuToggle = document.querySelector('.menu-toggle');
       const navLinks = document.querySelector('.nav-links');
 
+      // Toggles 'active' class on nav-links when the menu toggle button is clicked (for mobile)
       menuToggle.addEventListener('click', () => {
         navLinks.classList.toggle('active');
       });
