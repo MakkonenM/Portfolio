@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/projects.css" />
-    <title>Project Portfolio</title>
+    <title>Project</title>
   </head>
 
   <body>
@@ -95,5 +95,15 @@
         </div>
       </section>
     </main>
+
+    <script>
+      // JavaScript for toggle menu
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navLinks = document.querySelector('.nav-links');
+
+      menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+    </script>
   </body>
 </html>

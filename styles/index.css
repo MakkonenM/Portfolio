@@ -9,7 +9,6 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #f4f4f4;
   color: #333;
   display: flex;
   flex-direction: column;
@@ -263,7 +262,7 @@ nav {
   }
 
   .menu-toggle {
-    display: block; /* Show hamburger menu on tablet */
+    display: block; /* Show hamburger menu on */
   }
 
   .nav-links {

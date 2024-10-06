@@ -10,13 +10,19 @@
   <body>
     <header>
       <nav class="container">
+        <!-- Logo -->
         <div class="logo">Portfolio</div>
+        
+        <!-- Navigation Links -->
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="document.html">Documentation</a></li>
         </ul>
+
+        <!-- Toggle button for mobile menu -->
+        <div class="menu-toggle">☰</div>
       </nav>
     </header>
 
@@ -58,8 +64,33 @@
           </div>
         </div>
       </section>
+
+      <!-- Education timeline -->
+      <section class="timeline">
+        <div class="timeline-container left">
+          <div class="timeline-content">
+            <h2>2020-2023</h2>
+            <p>Graduation from vocational school.</p>
+          </div>
+        </div>
+
+        <div class="timeline-container right">
+          <div class="timeline-content">
+            <h2>2024</h2>
+            <p>Started working as a part-time junior developer.</p>
+          </div>
+        </div>
+
+        <div class="timeline-container left">
+          <div class="timeline-content">
+            <h2>2024</h2>
+            <p>I started studying at JAMK | University of applied sciences.</p>
+          </div>
+        </div>
+      </section>
     </main>
     <br />
+
     <!-- Contact me -->
     <div class="contact-container">
       <h1 class="contactme">Contact Me</h1>
@@ -78,5 +109,16 @@
         </div>
         <button class="btn" type="submit">Send Message</button>
       </form>
+      <!-- Hamburger menu  -->
+      <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+  
+        // Toggles 'active' class on nav-links when the menu toggle button is clicked (for mobile)
+        menuToggle.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+        });
+      </script>
+      </script>
   </body>
 </html>
