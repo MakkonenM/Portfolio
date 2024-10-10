@@ -8,11 +8,28 @@
   </head>
 
   <body>
+    <!-- Navigation bar -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">My Portfolio</div>
+
+        <!-- Navigation links for larger screens -->
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="document.html">Documentation</a></li>
+        </ul>
+
+        <!-- Menu toggle button for mobile -->
+        <div class="menu-toggle">☰</div>
+      </div>
+    </nav>
+
     <!-- Header section containing title and subtitle -->
     <header>
       <div class="container">
         <h1>Project Showcase</h1>
-
         <p class="subtitle">
           Bringing ideas to life through code and creativity!
         </p>
@@ -95,12 +112,12 @@
         </div>
       </section>
     </main>
-
+    <!-- Script for the toggle menu functionality -->
     <script>
-      // JavaScript for toggle menu
       const menuToggle = document.querySelector('.menu-toggle');
       const navLinks = document.querySelector('.nav-links');
 
+      // Toggles 'active' class on nav-links when the menu toggle button is clicked (for mobile)
       menuToggle.addEventListener('click', () => {
         navLinks.classList.toggle('active');
       });
