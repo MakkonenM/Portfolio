@@ -182,10 +182,12 @@ h1 {
 }
 
 @media (max-width: 600px) {
+  /* Ensure the heading size is adjusted */
   h1 {
     font-size: 2.5rem;
   }
 
+  /* Hide nav-links by default */
   .nav-links {
     display: none;
     position: absolute;
@@ -196,38 +198,23 @@ h1 {
     flex-direction: column;
     align-items: center;
     padding: 1rem 0;
+    z-index: 10; /* Ensure it's on top of other elements */
   }
 
+  /* Show the nav-links when the 'active' class is added */
   .nav-links.active {
     display: flex;
   }
 
+  /* Styling for individual links in mobile menu */
   .nav-links li {
     margin: 10px 0;
   }
 
+  /* Display the menu toggle button (hamburger icon) */
   .menu-toggle {
     display: block;
-  }
-
-  /* Dropdown interaction */
-  .menu-toggle {
     cursor: pointer;
-  }
-
-  .subtitle {
-    font-size: 1rem;
-    opacity: 0.8;
-    animation: fadeInUp 1s ease-out 0.5s both;
-  }
-
-  .project-image {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-  }
-
-  .projects {
-    grid-template-columns: 1fr;
+    z-index: 11; /* Ensure it's on top of other elements */
   }
 }
