@@ -31,10 +31,14 @@ h1 {
   animation: fadeInDown 1s ease-out;
 }
 
-/* Navigation bar */
+/* Global Navigation bar (desktop and tablet) */
 .navbar {
   background-color: #3a86ff;
-  padding: 10px 0;
+  padding: 0px 50px;
+  position: fixed;
+  width: 100%; /* Ensure the navbar spans the full width */
+  justify-content: space-between; /* Separate logo and links */
+  align-items: center; /* Vertically center the items */
 }
 
 .navbar .logo {
@@ -43,27 +47,53 @@ h1 {
   display: inline-block;
 }
 
-.navbar .nav-links {
-  list-style: none;
-  display: flex;
-  justify-content: flex-end;
-}
-
 .navbar .nav-links li {
   margin-left: 20px;
 }
 
 .navbar .nav-links a {
-  text-decoration: none;
   color: white;
-  font-size: 1rem;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 5px;
+  font-size: 18px;
+  transition: color 0.3s ease; /* Smooth transition for hover effects */
 }
 
-.navbar .menu-toggle {
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #9357ca; /* Underline color on hover */
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #9357ca;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Hide the hamburger menu by default on larger screens */
+.menu-toggle {
   display: none;
+  cursor: pointer;
   font-size: 2rem;
   color: white;
-  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end; /* Right-align the links */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1; /* Ensures the links occupy available space and stick to the right */
 }
 
 .subtitle {
@@ -182,14 +212,24 @@ h1 {
 }
 
 @media (max-width: 600px) {
-  /* Ensure the heading size is adjusted */
-  h1 {
-    font-size: 2.5rem;
+  /* Display the hamburger menu on mobile */
+  .menu-toggle {
+    display: block;
+    font-size: 2rem;
+    color: white;
+    background-color: #3a86ff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 11; /* Ensure it's on top of other elements */
+    position: absolute;
+    top: 10px;
+    right: 10px;
   }
 
-  /* Hide nav-links by default */
+  /* Hide nav-links by default for mobile */
   .nav-links {
-    display: none;
+    display: none; /* Initially hidden */
     position: absolute;
     top: 50px;
     left: 0;
@@ -201,7 +241,7 @@ h1 {
     z-index: 10; /* Ensure it's on top of other elements */
   }
 
-  /* Show the nav-links when the 'active' class is added */
+  /* Show nav-links when the 'active' class is added */
   .nav-links.active {
     display: flex;
   }
@@ -211,10 +251,14 @@ h1 {
     margin: 10px 0;
   }
 
-  /* Display the menu toggle button (hamburger icon) */
-  .menu-toggle {
-    display: block;
-    cursor: pointer;
-    z-index: 11; /* Ensure it's on top of other elements */
+  .navbar {
+    background-color: #3a86ff;
+    color: white;
+    height: 100px;
+    padding: 16px 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
   }
 }

@@ -20,11 +20,11 @@ body {
 }
 
 header {
-  background-color: #3498db;
+  background-color: #3a86ff;
   color: white;
   height: 100px;
   padding: 20px 0;
-  position: static;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
@@ -71,8 +71,32 @@ nav {
   display: flex;
 }
 
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 5px;
+  font-size: 18px;
+  transition: color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #9357ca; /* Underline color on hover */
+  transition: width 0.3s ease;
+}
+
 .nav-links a:hover {
-  color: #e74c3c;
+  color: #9357ca;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }
 
 .hero {
@@ -83,6 +107,7 @@ nav {
   text-align: center;
   color: white;
   position: relative;
+  margin-top: 100px;
 }
 
 .hero::before {
@@ -160,7 +185,7 @@ nav {
 }
 
 .contactme {
-  color: #3498db;
+  color: #3a86ff;
   text-align: center;
   font-size: 2.5em;
   margin-bottom: 1em;
@@ -226,7 +251,7 @@ nav {
 label {
   display: block;
   margin-bottom: 5px;
-  color: #3498db;
+  color: #3a86ff;
 }
 
 input[type='text'],
@@ -244,7 +269,7 @@ textarea {
 }
 
 button {
-  background-color: #3498db;
+  background-color: #3a86ff;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -301,12 +326,11 @@ button:hover {
     top: 70px;
     left: 0;
     right: 0;
-    background-color: #3498db;
+    background-color: #3a86ff;
     flex-direction: column;
     align-items: center;
     padding: 1rem 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000; /* Ensure the menu is above other content */
   }
 
   .nav-links.active {
