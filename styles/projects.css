@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
+/* Universal Reset: Removes margin, padding, and sets box-sizing to border-box for all elements */
 * {
   margin: 0;
   padding: 0;
@@ -7,68 +8,85 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f8f9fa;
-  line-height: 1.6;
+  font-family: 'Poppins', sans-serif; /* Google font */
+  background-color: #f8f9fa; /* Light grey background */
+  line-height: 1.6; /* Improve readability */
 }
 
+/* Container class: Provides a maximum width for content and centers it */
 .container {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  margin: 0 auto; /* Centers container horizontally */
+  padding: 0 20px; /* Horizontal padding */
 }
 
 header {
   background-color: #3a86ff;
-  color: white;
-  padding: 60px 0;
-  text-align: center;
+  color: white; /* Text color */
+  padding: 60px 0; /* Vertical padding */
+  text-align: center; /* Centers header content */
 }
 
 h1 {
   font-size: 3rem;
-  margin-bottom: 20px;
-  animation: fadeInDown 1s ease-out;
+  margin-bottom: 20px; /* Space below title */
+  animation: fadeInDown 1s ease-out; /* Animates the header title */
 }
 
-/* Global Navigation bar (desktop and tablet) */
 .navbar {
   background-color: #3a86ff;
-  padding: 0px 50px;
-  position: fixed;
-  width: 100%; /* Ensure the navbar spans the full width */
-  justify-content: space-between; /* Separate logo and links */
-  align-items: center; /* Vertically center the items */
+  padding: 10px 50px;
+  position: fixed; /* Fixed position at the top of the page */
+  width: 100%; /* Full width */
+  display: flex; /* Flexbox layout */
+  justify-content: space-between; /* Space between logo and nav links */
+  align-items: center; /* Vertically align navbar items */
 }
 
-.navbar .logo {
-  color: white;
-  font-size: 1.5rem;
-  display: inline-block;
+/* Container inside navbar for spacing the content */
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align items vertically */
+  width: 100%; /* Full width of the container */
 }
 
-.navbar .nav-links li {
+.logo {
+  color: white; /* Logo text color */
+  font-size: 1.5rem; /* Logo font size */
+}
+
+/* Navbar links styling: Flex layout for horizontal links */
+.nav-links {
+  display: flex; /* Flex layout for nav items */
+  list-style-type: none; /* Removes bullet points */
+  margin: 0;
+  padding: 0;
+}
+
+/* Space between nav items */
+.nav-links li {
   margin-left: 20px;
 }
 
-.navbar .nav-links a {
+.nav-links a {
   color: white;
-  text-decoration: none;
-  position: relative;
-  padding-bottom: 5px;
+  text-decoration: none; /* Removes underline from links */
+  position: relative; /* Allows positioning of the pseudo-element */
+  padding-bottom: 5px; /* Space below text for the underline */
   font-size: 18px;
-  transition: color 0.3s ease; /* Smooth transition for hover effects */
+  transition: color 0.3s ease; /* Smooth color transition */
 }
 
 .nav-links a::after {
-  content: '';
+  content: ''; /* Empty content for pseudo-element */
   position: absolute;
   width: 0;
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #9357ca; /* Underline color on hover */
-  transition: width 0.3s ease;
+  background-color: #9357ca; /* Color of the underline */
+  transition: width 0.3s ease; /* Smooth transition for underline */
 }
 
 .nav-links a:hover {
@@ -76,56 +94,50 @@ h1 {
 }
 
 .nav-links a:hover::after {
-  width: 100%;
+  width: 100%; /* Expands the underline on hover */
 }
 
-/* Hide the hamburger menu by default on larger screens */
+/* Hamburger menu for mobile: Hidden by default */
 .menu-toggle {
   display: none;
   cursor: pointer;
-  font-size: 2rem;
-  color: white;
-}
-
-.nav-links {
-  display: flex;
-  justify-content: flex-end; /* Right-align the links */
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  flex-grow: 1; /* Ensures the links occupy available space and stick to the right */
+  font-size: 2rem; /* Font size for the menu icon */
+  color: white; /* Color of the icon */
 }
 
 .subtitle {
   font-size: 1.2rem;
-  opacity: 0.8;
-  animation: fadeInUp 1s ease-out 0.5s both;
+  opacity: 0.8; /* Slightly transparent */
+  animation: fadeInUp 1s ease-out 0.5s both; /* Animates the subtitle */
 }
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  padding: 60px 0;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  ); /* Creates a flexible number of columns (min 300px per column) */
+  gap: 20px; /* Space between grid items */
+  padding: 60px 0; /* Vertical padding */
 }
 
 .project-card {
   background-color: #ffffff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
+  overflow: hidden; /* Prevents content from overflowing */
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px); /* Moves the card up */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow */
 }
 
 .project-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+  width: 100%; /* Full width of the card */
+  height: 200px; /* Fixed height for image */
+  object-fit: cover; /* Maintains aspect ratio while covering the area */
 }
 
 .project-info {
@@ -134,27 +146,27 @@ h1 {
 
 .project-title {
   font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #3a86ff;
+  margin-bottom: 10px; /* Space below title */
+  color: #3a86ff; /* Blue color for project title */
 }
 
 .project-description {
   font-size: 0.9rem;
-  color: #666;
+  color: #666; /* Darker grey text */
   margin-bottom: 15px;
 }
 
 .project-tech {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  flex-wrap: wrap; /* Allows the tech tags to wrap into new lines */
+  gap: 10px; /* Space between tech tags */
 }
 
 .tech-tag {
-  background-color: #ff006e;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 20px;
+  background-color: #ff006e; /* Pink background */
+  color: white; /* White text */
+  padding: 5px 10px; /* Padding around the tag */
+  border-radius: 20px; /* Rounded corners */
   font-size: 0.8rem;
 }
 
@@ -164,9 +176,9 @@ h1 {
   padding: 8px 15px;
   background-color: #3a86ff;
   color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  text-decoration: none; /* Removes underline */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth background transition */
 }
 
 .view-project:hover {
@@ -197,7 +209,35 @@ h1 {
 
 @media (max-width: 1024px) {
   h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
+  }
+
+  header {
+    padding: 150px 0;
+  }
+
+  .subtitle {
+    font-size: 2rem;
+  }
+
+  .logo {
+    font-size: 35px;
+  }
+
+  .nav-links a {
+    font-size: 30px;
+  }
+
+  .project-description {
+    font-size: 1.6rem;
+  }
+
+  .tech-tag {
+    font-size: 1.4rem;
+  }
+
+  .view-project {
+    font-size: 1.6rem;
   }
 
   .project-image {
@@ -231,7 +271,7 @@ h1 {
   .nav-links {
     display: none; /* Initially hidden */
     position: absolute;
-    top: 50px;
+    top: 75px;
     left: 0;
     right: 0;
     background-color: #3a86ff;
@@ -260,6 +300,22 @@ h1 {
     top: 0;
     width: 100%;
     z-index: 1000;
+  }
+
+  .project-tech {
+    justify-content: center;
+  }
+
+  .tech-tag {
+    font-size: 1rem;
+  }
+
+  .view-project {
+    font-size: 1.2rem;
+  }
+
+  .project-card {
+    text-align: center;
   }
 
   .project-description {

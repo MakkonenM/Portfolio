@@ -96,7 +96,7 @@ nav {
 
 /* Section padding to account for fixed header and add spacing */
 .section {
-  margin-top: 200px;
+  margin-top: 150px;
   margin-bottom: 150px; /* Bottom margin to space out sections */
   padding: 80px 0; /* Adds vertical padding within each section */
 }
@@ -305,21 +305,41 @@ textarea {
 
 /* Media Query for Tablets */
 @media screen and (max-width: 1024px) {
+  p {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
   .about-content {
     flex-direction: column; /* Stacks items on smaller screens */
   }
 
   .timeline-content p {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     color: #333;
+  }
+
+  .skill {
+    font-size: 1.4rem;
+  }
+
+  .logo {
+    font-size: 30px;
+  }
+
+  .nav-links a {
+    font-size: 30px;
+  }
+
+  .contact-container {
+    max-width: 800px;
   }
 
   .footer {
     background-image: url('../images/background-wawes-smaller.jpg'); /* Replace with your image path */
-  }
-
-  p {
-    font-size: 1.2rem;
   }
 }
 

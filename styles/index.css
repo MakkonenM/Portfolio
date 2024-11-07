@@ -259,34 +259,17 @@ nav {
     height: 60px;
   }
 
+  .logo {
+    font-size: 30px;
+  }
+
+  .nav-links a {
+    font-size: 30px;
+  }
+
   .social-icon svg {
     width: 30px; /* Increase the size of the icons inside */
     height: 30px;
-  }
-
-  .menu-toggle {
-    display: block; /* Show hamburger menu on */
-  }
-
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    right: 0;
-    background-color: #fff;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-links.active {
-    display: flex; /* Show links when hamburger is active */
-  }
-
-  .nav-links li {
-    margin: 10px 0; /* Add spacing between links */
   }
 }
 
